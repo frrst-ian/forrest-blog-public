@@ -1,3 +1,5 @@
+import { useState, useEffect } from "react";
+
 import "./App.css";
 
 const PostItem = ({ post }) => {
@@ -5,7 +7,11 @@ const PostItem = ({ post }) => {
     <div>
       <h1>{post.title}</h1>
       <p>{post.content}</p>
-      <p>{post.createdAt}</p>
+      <p>{new Date(post.createdAt).toLocaleDateString('en-US', {
+  year: 'numeric',
+  month: 'short', 
+  day: 'numeric'
+})}</p>
       <hr />
     </div>
   );
@@ -21,40 +27,29 @@ const PostList = ({ posts }) => {
   );
 };
 
-const POSTS = [
-  {
-    id: 1,
-    title: "Sample Title",
-    content:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-    createdAt: Date.now(),
-  },
-  {
-    id: 2,
-    title: "Sample Title 1",
-    content:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-    createdAt: Date.now(),
-  },
-
-  {
-    id: 3,
-    title: "Sample Title 2",
-    content:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-    createdAt: Date.now(),
-  },
-  {
-    id: 4,
-    title: "Sample Title 3",
-    content:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-    createdAt: Date.now(),
-  },
-];
-
 const App = () => {
-  return <PostList posts={POSTS} />;
+  const [posts, setPosts] = useState([]);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState(null);
+
+  useEffect(() => {
+    fetch("http://localhost:3000/posts")
+      .then((response) => response.json())
+      .then((data) => {
+        setPosts(data);
+        setLoading(false);
+      })
+      // eslint-disable-next-line no-unused-vars
+      .catch((err) => {
+        setError("Failed to load posts");
+        setLoading(false);
+      });
+  }, []);
+
+  if (loading) return <div>Loading...</div>;
+  if (error) return <div>Error: {error}</div>;
+
+  return <PostList posts={posts} />;
 };
 
 export { App };
