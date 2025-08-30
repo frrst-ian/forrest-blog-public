@@ -8,8 +8,9 @@
 
 header.header {
   margin: 20px;
-  border: 2px solid blue;
-  min-width: 90%;
+  border: 2px solid black;
+  min-width: 85%;
+  padding: 12px;
 }
 
 .main {

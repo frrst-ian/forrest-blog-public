@@ -1,18 +1,10 @@
+import "../../styles/components/PostItem.css";
+
 const PostItem = ({ post, previewContent, onPostClick }) => {
   return (
-    <div
-      onClick={onPostClick}
-      style={{
-        cursor: "pointer",
-        padding: "15px",
-        border: "1px solid #eee",
-        marginBottom: "10px",
-        borderRadius: "4px",
-        hover: { backgroundColor: "#f9f9f9" },
-      }}
-    >
-      <h1>{post.title}</h1>
-      <p>{previewContent}</p>
+    <div className="postItem" onClick={onPostClick}>
+      <h2 className="postItem_title">{post.title}</h2>
+      <p className="postItem_para">{previewContent}</p>
     </div>
   );
 };
