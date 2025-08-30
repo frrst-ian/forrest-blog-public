@@ -1,0 +1,17 @@
+.app {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+header.header {
+  margin: 20px;
+  border: 2px solid blue;
+  min-width: 90%;
+}
+
+.main {
+  flex: 1;
+}
