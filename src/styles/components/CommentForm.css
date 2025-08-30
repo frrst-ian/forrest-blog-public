@@ -1,0 +1,17 @@
+form.commentForm {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin: 24px 0 24px 0;
+  min-width: 500px;
+}
+
+input[type="text"] {
+  padding: 8px;
+}
+
+textarea {
+  padding: 8px;
+  resize: vertical;
+  height: 120px;
+}

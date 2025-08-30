@@ -1,4 +1,5 @@
 import CommentForm from "./CommentForm";
+import "../../styles/components/PostDetail.css";
 
 const PostDetail = ({
   post,
@@ -13,32 +14,26 @@ const PostDetail = ({
   error,
 }) => {
   return (
-    <div>
+    <div className="postDetail">
       <button
+        className="btn"
         onClick={onBackClick}
-        style={{
-          marginBottom: "20px",
-          padding: "8px 16px",
-          backgroundColor: "#f0f0f0",
-          border: "1px solid #ccc",
-          borderRadius: "4px",
-          cursor: "pointer",
-        }}
+        
       >
         ← Back to Posts
       </button>
 
-      <h1>{post.title}</h1>
-      <small>
+      <h1 className="postDetail_title">{post.title}</h1>
+      <small className="postDetail_date">
         {new Date(post.createdAt).toLocaleDateString("en-US", {
           year: "numeric",
           month: "short",
           day: "numeric",
         })}
       </small>
-      <p>{post.content}</p>
+      <p className="postDetail_content">{post.content}</p>
 
-      <div>
+      <div className="comments">
         <h3>Comments ({comments.length})</h3>
         <CommentForm
           authorName={authorName}
@@ -50,26 +45,16 @@ const PostDetail = ({
           error={error}
         />
         {comments.map((comment) => (
-          <div
-            key={comment.id}
-            style={{
-              border: "1px solid #eee",
-              padding: "10px",
-              marginBottom: "10px",
-              borderRadius: "4px",
-            }}
-          >
-            <p>
-              <strong>{comment.authorName}</strong>
-            </p>
-            <small>
+          <div className="comments_item" key={comment.id}>
+            <p className="comment_author">{comment.authorName}</p>
+            <small className="comment_date">
               {new Date(comment.createdAt).toLocaleDateString("en-US", {
                 year: "numeric",
                 month: "short",
                 day: "numeric",
               })}
             </small>
-            <p>{comment.content}</p>
+            <p className="comment_content">{comment.content}</p>
           </div>
         ))}
       </div>

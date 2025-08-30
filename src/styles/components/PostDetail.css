@@ -1,0 +1,31 @@
+.postDetail {
+  margin: 20px 100px 20px 100px;
+}
+
+.btn {
+  margin-bottom: 14px;
+  padding: 6px;
+  min-width: 150px;
+  border: 1px solid;
+  border-radius: 5px;
+}
+
+p.postDetail_content {
+    margin: 12px 0 48px 0;
+}
+
+.comments {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.comments_item {
+    min-width: 500px;
+    border: 1px solid;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 14px;
+    padding: 14px;
+}

@@ -1,3 +1,5 @@
+import "../../styles/components/CommentForm.css";
+
 const CommentForm = ({
   authorName,
   setAuthorName,
@@ -5,41 +7,25 @@ const CommentForm = ({
   setContent,
   submitting,
   onSubmit,
-  error,
 }) => {
   return (
-    <form onSubmit={onSubmit}>
-      {error && (
-        <div
-          style={{
-            color: "red",
-            backgroundColor: "#ffe6e6",
-            padding: "10px",
-            borderRadius: "4px",
-            marginBottom: "10px",
-            border: "1px solid red",
-          }}
-        >
-          {error}
-        </div>
-      )}
-
+    <form onSubmit={onSubmit} className="commentForm">
       <input
         type="text"
-        placeholder="Your Name"
+        placeholder="Name"
         value={authorName}
         onChange={(e) => setAuthorName(e.target.value)}
         required
       />
 
       <textarea
-        placeholder="Your comment"
+        placeholder="Comment"
         value={content}
         onChange={(e) => setContent(e.target.value)}
         required
       />
 
-      <button type="submit" disabled={submitting}>
+      <button className="btn" type="submit" disabled={submitting}>
         {submitting ? "Posting..." : "Post Comment"}
       </button>
     </form>
