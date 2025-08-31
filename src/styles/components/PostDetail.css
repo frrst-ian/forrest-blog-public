@@ -22,7 +22,7 @@ p.postDetail_content {
 }
 
 .comments_item {
-    min-width: 500px;
+    min-width: 700px;
     border: 1px solid;
     display: flex;
     flex-direction: column;

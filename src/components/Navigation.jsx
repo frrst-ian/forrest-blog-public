@@ -13,8 +13,20 @@ const Navigation = () => {
         </Link>
       </div>
       <div className="navigation_links">
-        <a href="#">Link 1</a>
-        <a href="#">Link1</a>
+        <a
+          className="navigation_icon"
+          href="https://github.com/frrst-ian"
+          referrerPolicy="no-referrer"
+          rel="noopener"
+          target="_blank"
+        >
+          <img
+            src="src/assets/icons/github-142-svgrepo-com.svg"
+            alt="github icon"
+            width="25"
+            height="25"
+          />
+        </a>
       </div>
     </nav>
   );

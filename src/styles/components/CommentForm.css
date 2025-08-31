@@ -3,7 +3,7 @@ form.commentForm {
   flex-direction: column;
   gap: 16px;
   margin: 24px 0 24px 0;
-  min-width: 500px;
+  min-width: 700px;
 }
 
 input[type="text"] {

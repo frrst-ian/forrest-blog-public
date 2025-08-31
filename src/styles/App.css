@@ -4,13 +4,16 @@
   justify-content: center;
   align-items: center;
   min-height: 100vh;
+
+  background-image: var(--background);
+  color: var(--text);
 }
 
-header.header {
+.header {
   margin: 20px;
-  border: 2px solid black;
-  min-width: 85%;
+  min-width: 100%;
   padding: 12px;
+  border-bottom: 1px solid #ffffff28;
 }
 
 .main {
