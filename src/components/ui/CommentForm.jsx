@@ -10,6 +10,7 @@ const CommentForm = ({
 }) => {
   return (
     <form onSubmit={onSubmit} className="commentForm">
+      <p>Share your thoughts:</p>
       <input
         name="author"
         type="text"

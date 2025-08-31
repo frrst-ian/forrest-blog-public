@@ -18,9 +18,14 @@
 
 .postItem_title_wrapper {
   display: flex;
-  align-items: center;
+  align-items: start;
   gap: 10px;
   margin-bottom: 10px;
+}
+
+.postItem_title_wrapper svg {
+  flex-shrink: 0; /* Prevent the icon from shrinking */
+  margin-top: 2px; /* Slight vertical adjustment to align with text */
 }
 
 .postItem_title {
@@ -31,4 +36,26 @@
 
 .postItem_para {
   font-family: "Inter Regular";
+}
+
+@media (max-width: 768px) {
+  .postItem {
+    padding: 20px 16px;
+    margin-bottom: 16px;
+  }
+  
+  .postItem_title {
+    font-size: 1.2rem;
+    line-height: 1.4;
+  }
+  
+  .postItem_para {
+    font-size: 0.95rem;
+    line-height: 1.5;
+  }
+  
+  .postItem:active {
+    transform: scale(0.98);
+    transition: transform 0.1s;
+  }
 }

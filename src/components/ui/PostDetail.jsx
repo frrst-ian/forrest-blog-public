@@ -52,7 +52,7 @@ const PostDetail = ({
               <p>{comment.authorName}</p>
             </div>
             <div className="comment_date">
-              <CalendarFold/>
+              <CalendarFold />
               <small className="comment_date">
                 {new Date(comment.createdAt).toLocaleDateString("en-US", {
                   year: "numeric",
