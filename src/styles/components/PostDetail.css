@@ -1,31 +1,117 @@
 .postDetail {
   margin: 20px 100px 20px 100px;
+  font-family: "Inter Regular";
 }
 
 .btn {
   margin-bottom: 14px;
-  padding: 6px;
+  padding: 10px;
   min-width: 150px;
-  border: 1px solid;
-  border-radius: 5px;
+  border: none;
+  border-radius: 10px;
+  font-family: "Jetbrains Mono";
+  background-color: var(--btn-primary);
+  color: var(--text-2);
+  transition: ease-in-out 0.2s;
+}
+
+.btn:hover {
+  transition: ease-in-out 0.2s;
+  color: var(--text);
+  background-color: #2c3136;
+}
+
+.postDetail_title {
+  font-family: "Roboto";
+}
+
+.postDetail_date,
+.comment_date {
+  display: flex;
+  align-items: center;
+  align-items: center;
+  gap: 12px;
+  font-size: 0.9rem;
+  margin: 10px 0;
 }
 
 p.postDetail_content {
-    margin: 12px 0 48px 0;
+  font-size: 1.2rem;
+  margin: 12px 0 48px 0;
 }
 
 .comments {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 90px;
+}
+
+input[type="text"] {
+  padding: 8px 20px;
+  border: none;
+  border-radius: 10px;
+  outline: none;
+  background-color: #232323;
+  color: var(--text-2);
+}
+
+input[type="text"]:hover {
+  border: 1px solid #676a6c68;
+}
+
+textarea {
+  padding: 8px 20px;
+  border: none;
+  border-radius: 10px;
+  outline: none;
+  background-color: #232323;
+  color: var(--text-2);
+}
+
+textarea:hover {
+  border: 1px solid #676a6c68;
+}
+
+.btn--blue {
+  background-color: #60a2d4;
+  color: #2c3136;
 }
 
 .comments_item {
-    min-width: 700px;
-    border: 1px solid;
-    display: flex;
-    flex-direction: column;
-    margin-bottom: 14px;
-    padding: 14px;
+  min-width: 700px;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 14px;
+  padding: 14px;
+  background-color: #302e36;
+  border-radius: 12px;
+  gap: 4px;
+}
+
+.comment_author {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+
+.comment_author > p {
+  font-size: 1.1rem;
+}
+
+svg.lucide.lucide-user {
+  margin-bottom: 4px;
+}
+
+.comment_date {
+  margin: 0px 0px 4px 0px;
+}
+
+small.comment_date {
+  margin-top: 4px;
+}
+
+p.comment_content {
+  margin: 8px 0;
 }

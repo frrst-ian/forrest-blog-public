@@ -27,7 +27,7 @@ const CommentForm = ({
         required
       />
 
-      <button className="btn" type="submit" disabled={submitting}>
+      <button className="btn btn--blue" type="submit" disabled={submitting}>
         {submitting ? "Posting..." : "Post Comment"}
       </button>
     </form>
