@@ -20,7 +20,6 @@ const PostDetail = ({
       <button className="btn" onClick={onBackClick}>
         ← Back to Posts
       </button>
-
       <h1 className="postDetail_title">{post.title}</h1>
       <div className="postDetail_date">
         <CalendarFold />
@@ -32,8 +31,11 @@ const PostDetail = ({
           })}
         </small>
       </div>
-      <p className="postDetail_content">{post.content}</p>
-
+      <p
+        className="postDetail_content"
+        dangerouslySetInnerHTML={{ __html: post.content }}
+      >
+      </p>
       <div className="comments">
         <h3>Comments ({comments.length})</h3>
         <CommentForm
