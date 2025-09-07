@@ -24,15 +24,7 @@ const PostListContainer = () => {
   if (error) {
     return (
       <div
-        style={{
-          color: "red",
-          backgroundColor: "#ffe6e6",
-          padding: "20px",
-          borderRadius: "4px",
-          border: "1px solid red",
-          textAlign: "center",
-          margin: "20px",
-        }}
+       className="error"
       >
         <h2>Error Loading Posts</h2>
         <p>{error}</p>
