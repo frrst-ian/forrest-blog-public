@@ -8,7 +8,7 @@ const Navigation = () => {
   return (
     <nav className="navigation">
       <div className="navigation_home">
-        <Link to="posts" className={isActive ? "active" : ""}>
+        <Link to="posts" className={isActive ? "active home" : ""}>
           Home
         </Link>
       </div>
@@ -21,7 +21,7 @@ const Navigation = () => {
           target="_blank"
         >
           <img
-            src="src/assets/icons/github-142-svgrepo-com.svg"
+            src="../../src/assets/icons/github-142-svgrepo-com.svg"
             alt="github icon"
             width="25"
             height="25"

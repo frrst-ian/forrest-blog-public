@@ -30,3 +30,15 @@
   color: var(--text);
   font-family: "Jetbrains Mono";
 }
+
+.error {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Jetbrains Mono';
+    gap: 12px;
+    background: indianred;
+    padding: 12px;
+    border-radius: 12px;
+}

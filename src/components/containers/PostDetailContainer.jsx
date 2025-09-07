@@ -53,22 +53,17 @@ const PostDetailContainer = () => {
   if (error) {
     return (
       <div>
-        <button onClick={handleBackClick} style={{ marginBottom: "20px" }}>
+        <button
+          className="btn"
+          onClick={handleBackClick}
+          style={{ marginBottom: "20px" }}
+        >
           ← Back to Posts
         </button>
-        <div
-          style={{
-            color: "red",
-            backgroundColor: "#ffe6e6",
-            padding: "20px",
-            borderRadius: "4px",
-            border: "1px solid red",
-            textAlign: "center",
-          }}
-        >
+        <div className="error">
           <h2>Error</h2>
           <p>{error}</p>
-          <button
+          <button className="btn"
             onClick={() => window.location.reload()}
             style={{ marginTop: "10px" }}
           >

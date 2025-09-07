@@ -108,7 +108,7 @@ h6 {
   --btn-primary:#6D7B86
 }
 
-a {
+.home {
   text-decoration: none;
   color: var(--text-2);
 }
