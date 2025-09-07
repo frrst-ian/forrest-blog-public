@@ -1,4 +1,4 @@
-const BASE_URL = "http://localhost:3000";
+const BASE_URL = "https://forrest-blog-backend.onrender.com";
 
 export async function getPosts() {
   try {
