@@ -19,4 +19,14 @@
 .main {
   flex: 1;
   padding: 0 16px;
+  width: 100%;
+}
+
+.loading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 500px;
+  color: var(--text);
+  font-family: "Jetbrains Mono";
 }
