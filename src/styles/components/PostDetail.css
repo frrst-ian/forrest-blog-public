@@ -45,6 +45,14 @@ p.postDetail_content {
   line-height: 1.7;
 }
 
+.postDetail_content > h1,
+.postDetail_content > h2,
+.postDetail_content > h3,
+.postDetail_content > h4,
+.postDetail_content > h5 {
+  margin: 16px 0;
+}
+
 #post-content-wrapper > h1,
 #post-content-wrapper > h2,
 #post-content-wrapper > h3,
