@@ -24,12 +24,12 @@ This frontend interfaces with the [Blog API backend](https://github.com/frrst-ia
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/frrst-ian/forrest-blog-frontend.git
+   git clone https://github.com/frrst-ian/forrest-blog-public.git
    ```
 
 2. Navigate to project directory:
    ```bash
-   cd forrest-blog-frontend
+   cd forrest-blog-public
    ```
 
 3. Install dependencies:
