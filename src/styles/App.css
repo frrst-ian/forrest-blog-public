@@ -32,13 +32,29 @@
 }
 
 .error {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    font-family: 'Jetbrains Mono';
-    gap: 12px;
-    background: indianred;
-    padding: 12px;
-    border-radius: 12px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-family: "Jetbrains Mono";
+  gap: 12px;
+  background: indianred;
+  padding: 12px;
+  border-radius: 12px;
+}
+
+@media (max-width: 768px) {
+  .main {
+    flex: 1;
+    padding: 0 20px;
+    width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .main {
+    flex: 1;
+    padding: 0 16px;
+    width: 100%;
+  }
 }
